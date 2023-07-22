@@ -18,8 +18,8 @@ turtle.color("black")
 turtle.circle(radius)
 
 turtle.penup()
-# because gap should be equally spread to 3 circles
-turtle.backward(gap/3)
+# because distance between blue and black circle is 5*gap
+turtle.backward(gap/2.5)
 turtle.pendown()
 
 turtle.left(90)
