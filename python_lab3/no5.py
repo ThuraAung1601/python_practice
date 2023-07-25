@@ -1,6 +1,6 @@
 sum = 0
 
-for i in range(0,6):
+for i in range(0,5):
     num = int(input("Enter an integer: "))
     if num < 0:
         if sum < 0:
