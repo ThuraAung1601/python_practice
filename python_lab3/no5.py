@@ -3,13 +3,13 @@ sum = 0
 for i in range(0,6):
     num = int(input("Enter an integer: "))
     if num < 0:
-        if num < 0 and sum < 0:
+        if sum < 0:
             sum += num
         else:
             sum = 0
             sum += num
     elif num > 0:
-        if num > 0 and sum > 0:
+        if sum > 0:
             sum += num
         else:
             sum = 0
