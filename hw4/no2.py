@@ -48,6 +48,7 @@ def draw(x,y,w,h):
     turtle.forward(w)
     turtle.left(90)
     turtle.forward(h/2)
+    turtle.left(90)
 
 # to validate with visual content
 draw(x1,y1,w1,h1)
