@@ -1,20 +1,16 @@
-sum = 0
+char = input("Please enter a character:")
+ascii = ord(char)
 
-for i in range(0,5):
-    num = int(input("Enter an integer: "))
-    if num < 0:
-        if sum < 0:
-            sum += num
-        else:
-            sum = 0
-            sum += num
-    elif num > 0:
-        if sum > 0:
-            sum += num
-        else:
-            sum = 0
-            sum += num
-    else:     
-        sum += num
+while char != "\t":
+    if ascii >= 0x30 and ascii <= 0x39:
+        print("{} is a numeric character.".format(char))
+    elif ascii >= 0x41 and ascii <= 0x5a:
+        print("{} is a capital letter and its small-case letter is {}".format(char,char.lower()))
+    elif ascii >= 0x61 and ascii <= 0x7a:
+        print("{} is a small-case letter and its capital letter is {}".format(char,char.upper()))
+    else:
+        print("{} is a special character.".format(char))
+    char = input("Please enter a character:")
+    ascii = ord(char)
 
-    print("Current sum:",sum)
+print("See You Tomorrow")
