@@ -21,17 +21,3 @@ while k <= N:
     k += 1
     
 turtle.done()
-
-# set the fillcolor
-t.fillcolor(col)
-  
-# start the filling color
-t.begin_fill()
-  
-# drawing the square of side s
-for _ in range(4):
-  t.forward(s)
-  t.right(90)
-  
-# ending the filling of the color
-t.end_fill()
