@@ -2,8 +2,8 @@ import turtle
 
 day = ["Su","Mo","Tu","We","Th","Fr","Sa"]
 month = [31,28,31,30,31,30,31,31,30,31,30,31]
-date, per_week = 0, 7
-
+date, per_week = 0, 1
+# turtle.speed(0)
 turtle.tracer(0)
 turtle.penup()
 turtle.goto(-380,280)
@@ -57,15 +57,17 @@ while x < 12:
             if a == per_week and date > 0:
                 date -= 1
                 turtle.forward(5)
-                turtle.write(month[x] - date)
+                turtle.write(month[x] -date)
                 turtle.back(5)
                 draw_box(2)
                 turtle.forward(25)
-                if per_week < 7:
-                    per_week += 1
-                else:
+                print("perweek",per_week)
+                if per_week == 7:
                     per_week = 1
+                else:
+                    per_week += 1
             else:
+                # Empty box
                 draw_box(2)
                 turtle.forward(25)
             a += 1
