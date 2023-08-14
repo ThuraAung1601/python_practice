@@ -1,3 +1,19 @@
+'''
+Write a Python program that prompts the user to enter any integer, greater than or equal to 1, 
+and the program displays the output with the pattern like the following example.
+Input: 1
+*
+Input: 3
+*
+**
+***
+**
+*
+**
+*
+*
+
+'''
 num = int(input("Input: "))
 if num >= 1:
     for k in range(num, 0, -1):
