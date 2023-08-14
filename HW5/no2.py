@@ -1,3 +1,6 @@
+'''
+Write a Python program using the turtle module and while loops to print out the calendar of 12 months of the year 2023.
+'''
 import turtle
 
 day = ["Su","Mo","Tu","We","Th","Fr","Sa"]
