@@ -109,7 +109,7 @@ TypeError: ord() expected string of length 1, but int found
 >>> num >= 0x30 and num <= 0x39
 True
 ```
-- String concatenation
+## String concatenation
 ```
 >>> message1 = "Welcome to" + "KMITL."
 >>> message2 = "I am Thura. \n She is Ei."
@@ -121,7 +121,7 @@ True
 >>> message 
 'Welcome toKMITL.I am Thura. \n She is Ei.'
 ```
-- In Python, user input is string data types.
+## User input
 ```
 >>> val = input("Enter ur name: ")
 Enter ur name: Thura
@@ -139,7 +139,46 @@ Enter ur age:21
 21
 >>> type(val)
 <class 'int'>
+```
+## Formatting floating-point numbers
+```
+>>> format(10.123456789, "10.2f")
+'     10.12'
+>>> format(10.123456789, "1.2f")
+'10.12'
+>>> format(10.123456789, ".2f")
+'10.12'
+>>> format(10.123456789, ".5f")
+'10.12346'
 ``` 
+
+## Formatting in Scientific Notation
+```
+>>> format(99.123456, "10.2e")
+'  9.91e+01'
+>>> format(99.123456, "5.2e")
+'9.91e+01'
+>>> format(99.123456, ".2e")
+'9.91e+01'
+>>> format(99.123456, ".4e")
+'9.9123e+01'
+```
+
+## Formatting as Percentage
+```
+>>> format(0.5, ".4%")
+'50.0000%'
+>>> format(0.5, "1.2%")
+'50.00%'
+>>> format(0.5, "10.2%")
+'    50.00%'
+>>> format(0.456, "10.2%")
+'    45.60%'
+>>> format(.455, ".2%")
+'45.50%'
+``` 
+
+
 
 
 
