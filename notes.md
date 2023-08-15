@@ -1,3 +1,6 @@
+# Notes taken from Computer Programming class
+
+## Data types
 - Python has int, float, char, str and bool literal data types.
 - Use type() to check data types.
 ```
@@ -9,12 +12,12 @@ python
 >>> type(True)
 <class 'bool'>
 ```
-## Variables
+## Variable
 ```
 x = 1
 print(x) # 1
 ```
-
+# Arithmetic operations
 ```
 >>> 5+10
 15
@@ -42,6 +45,7 @@ print(x) # 1
 **=  Exponent assignment i **= 8  i = i ** 8
 ```
 
+## Basic mathematical operations
 ```
 >>> var_x = 3.1428
 >>> var_y = int(var_x)
@@ -90,4 +94,53 @@ print(x) # 1
 >>> math.fabs(-2.5)
 2.5
 ``` 
+## Strings and characters
+```
+>>> num = 3
+>>> num >= 0x30 and num <= 0x39
+False
+>>> ord(num)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: ord() expected string of length 1, but int found
+>>> ord(str(num))
+51
+>>> num = ord(str(num))
+>>> num >= 0x30 and num <= 0x39
+True
+```
+- String concatenation
+```
+>>> message1 = "Welcome to" + "KMITL."
+>>> message2 = "I am Thura. \n She is Ei."
+>>> message = message1 + message2
+>>> message1
+'Welcome toKMITL.'
+>>> message2
+'I am Thura. \n She is Ei.'
+>>> message 
+'Welcome toKMITL.I am Thura. \n She is Ei.'
+```
+- In Python, user input is string data types.
+```
+>>> val = input("Enter ur name: ")
+Enter ur name: Thura
+>>> val
+'Thura'
+>>> val = input("Enter ur age: ")
+Enter ur age: 21
+>>> val
+'21'
+>>> type(val)
+<class 'str'>
+>>> val = eval(input("Enter ur age:"))
+Enter ur age:21
+>>> val
+21
+>>> type(val)
+<class 'int'>
+``` 
+
+
+
 
