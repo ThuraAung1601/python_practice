@@ -5,7 +5,6 @@ If the input is in the range 0 - 999, the program outputs the English pronunciat
 of that number; otherwise the program outputs "I don't know".
 '''
 def num2word(input_num):
-    english_megas = ["", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion", "sextillion", "septillion", "octillion", "nonillion", "decillion", "undecillion", "duodecillion", "tredecillion", "quattuordecillion"]
     english_units = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
     english_tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
     english_teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
