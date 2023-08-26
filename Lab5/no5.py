@@ -1,5 +1,4 @@
 char = input("Please enter a character:")
-char_list = [ c for c in char ]
 
 def check_it(ascii):
     if ascii >= 0x30 and ascii <= 0x39:
@@ -12,7 +11,7 @@ def check_it(ascii):
         print("{} is a special character.".format(c))
 
 while char != "\t":
-    for c in char_list:
+    for c in char:
         check_it(ord(c))
     char = input("Please enter a character:")
     char_list = [ c for c in char ]
