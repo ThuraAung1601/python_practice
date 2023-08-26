@@ -1,5 +1,3 @@
-char = input("Please enter a character:")
-
 def check_it(ascii):
     if ascii >= 0x30 and ascii <= 0x39:
         result = "{} is a numeric character.".format(c)
@@ -11,6 +9,7 @@ def check_it(ascii):
         result = "{} is a special character.".format(c)
     return result
 
+char = input("Please enter a character:")
 while char != "\t":
     for c in char:
         output = check_it(ord(c))
