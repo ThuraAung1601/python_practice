@@ -1,26 +1,28 @@
 import turtle
 
-# Function to draw a square of size n
-def draw_square(n):
-    for _ in range(4):
-        turtle.forward(n)
-        turtle.right(90)
+def draw_sq(size):
+    turtle.penup()
+    turtle.forward(size/2)
+    turtle.pendown()
+    turtle.left(90)
+    turtle.forward(size/2)
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size/2)
 
-# Function to draw nested squares with a gap
-def draw_nested_squares(s, g):
+def draw_nested_squares(s,g):
     while s >= 20:
-        draw_square(s)
+        draw_sq(s)
         turtle.write(s)
         turtle.penup()
-        # Adjust starting position based on initial square size
-        turtle.goto(turtle.xcor()+g, turtle.ycor()-g)  
-        turtle.pendown() 
-        # Reduce the size for the next inner square 
-        s -= 2 * g      
-# Size of the outermost square
-initial_size = 150
-# Gap between inner squares  
-gap = 20
+        turtle.goto(0,0)
+        turtle.pendown()
+        s -= 2 * g
 
-draw_nested_squares(initial_size, gap)  # Drawing the nested squares
+draw_nested_squares(200, 20)
 turtle.done()
