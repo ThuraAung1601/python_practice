@@ -33,3 +33,4 @@ def draw_spiral(n):
         draw_sq(n)
 
 draw_spiral(150)
+turtle.done()
