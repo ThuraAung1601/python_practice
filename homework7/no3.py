@@ -4,7 +4,7 @@ Design a class named LinearEquation for a
 system of linear equations:
 The class contains:
 ax + by = e     cx + dy = f
-x =ed - bf / ad - bc
+x = ed - bf / ad - bc
 y = af - ec /ad - bc
 ■ The private data fields a, b, c, d, e, and f with get methods.
 ■ A constructor with the arguments for a, b, c, d, e, and f.
