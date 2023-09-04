@@ -10,15 +10,15 @@ class Clock:
         self.minute = minute
         self.second = second
     def set_time(self, newHour, newMinute, newSecond):
-        self.hour = newHour
-        self.minute = newMinute
-        self.second = newSecond
-    def get_hour(self):
-        return self.hour
-    def get_minute(self):
-        return self.minute
-    def get_second(self):
-        return self.second
+        if 0 <= newHour <= 24 and 0 <= newMinute < 60 and 0 <= newSecond < 60:
+            self.hour = newHour
+            self.minute = newMinute
+            self.second = newSecond
+            return f"Set Time {self.hour:02d}:{self.minute:02d}:{self.second:02d}"
+        else:
+            return "Invalid time format."
+    def get_time(self):
+        return self.hour, self.minute, self.second
     def tick(self):
         self.second += 1
         if self.second == 60:
@@ -30,21 +30,33 @@ class Clock:
                 if self.hour >= 24:
                     self.hour = 0
     def display(self):
-        if self.hour >= 12:
-            self.hour = self.hour - 12
-            am_pm = "PM"
+        am_pm = "AM" if self.hour < 12 else "PM"
+        if self.hour == 0:
+            hour = 12
+        elif self.hour <= 12:
+            hour = self.hour
         else:
-             am_pm = "AM"
-        print(f"Your current time is {self.hour:02d}:{self.minute:02d}:{self.second:02d} {am_pm}.")
+            hour = self.hour - 12
+        print(f"Your current time is {hour:02d}:{self.minute:02d}:{self.second:02d} {am_pm}.")
 
 c = Clock(0,0,0)
 c.display()
+
 c.set_time(22,30,5)
-current_hour = c.get_hour()
-print(current_hour)
-c.set_time(23,24,50)
-current_hour = c.get_hour()
-print(current_hour)
-current_minute = c.get_minute()
-print(current_minute)
+current_time = c.get_time()
+print(current_time)
+
+c.set_time(23,24,59)
+c.display()
+c.tick()
+c.display()
+
+c.set_time(23,59,59)
+c.display()
+c.tick()
+c.display()
+
+c.set_time(13,59,59)
+c.display()
+c.tick()
 c.display()
