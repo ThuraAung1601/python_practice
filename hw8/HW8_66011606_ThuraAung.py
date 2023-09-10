@@ -42,9 +42,9 @@ def main():
     else:
         ch = input("Enter b to get binary and i to get integer:")
         if ch == 'b':
-            print(int2binary(num))
+            print("Binary is", int2binary(num))
         elif ch == 'i':
-            print(binary2int(num))
+            print("Integer is", binary2int(num))
 
 main()
 
@@ -175,7 +175,7 @@ def isbn10(digits):
 def main():
     nine_digit = input("Enter the first 9 digits of an ISBN-10 as a string: ")
     isbn10_num = isbn10(nine_digit)
-    print(isbn10_num)
+    print("Your ISBN-10 number is", isbn10_num)
 
 main()
 
