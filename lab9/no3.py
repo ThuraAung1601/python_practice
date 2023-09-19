@@ -17,7 +17,6 @@ canvas = Canvas(window, width=500, height=500)
 canvas.grid(row=0, column=0, sticky=(N,W,E,S))
 canvas.bind("<Button-1>", xy)
 canvas.bind("<B1-Motion>", addLine)
-canvas.create_text(text="Drag the mouse to draw")
 
 clear = Button(window, text="Clear", command=lambda: canvas.delete("all"))
 clear.grid(row=1, column=0)
