@@ -5,8 +5,7 @@ class KMITL_Phone:
         self.root = root
         self.root.title("KMITL Phone")
         self.root.geometry("200x300")
-        self.root.option_add("*Font", "Tahoma 12")
-
+        
         # Create a Text widget for displaying the dialed number
         self.display = tk.Text(root, height=5)
         self.display.grid(row=0, column=0, columnspan=4, padx=1, pady=1, sticky="nsew")
