@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Transportation:
+class Transportation(ABC):
     def __init__(self, start_place, end_place, distance):
         self.start_place = start_place
         self.end_place = end_place
