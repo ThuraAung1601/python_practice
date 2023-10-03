@@ -49,23 +49,3 @@ class Rectangle(TwoDshape):
         turtle.goto(self.x, self.y + self.height)
         turtle.goto(self.x, self.y)
         turtle.penup()
-
-
-shapes = []
-
-r1 = Rectangle(-50, -50, 30, 20)
-# r1.draw()
-shapes.append(r1)
-
-l1 = Line(40, 0)
-# l1.draw()
-shapes.append(l1)
-
-c1 = Circle(20, 20, 30)
-# c1.draw()
-shapes.append(c1)
-
-for s in shapes:
-    s.draw()
-
-turtle.done()
