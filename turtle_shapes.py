@@ -50,7 +50,6 @@ def star(length):
 # star(30)
 # turtle.done()
 
-
 def triangle(coor1, coor2, coor3):
     x1, y1 = coor1[0], coor1[1]
     x2, y2 = coor2[0], coor2[1]
