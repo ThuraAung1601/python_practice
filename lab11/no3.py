@@ -1,6 +1,8 @@
 class Name:
-    def __init__(self):
-        pass
+    def __init__(self, t, f, l):
+        self.title = t
+        self.firstName = f
+        self.lastName = l
     def setName(self, t, f, l):
         self.title = t
         self.firstName = f
@@ -9,8 +11,16 @@ class Name:
         return "{}. {} {}".format(self.title, self.firstName, self.lastName)
 
 class Date:
-    def __init__(self):
-        pass
+    def __init__(self, day, month, year):
+        if day > 31:
+            month += day // 31
+            day %= 31
+        if month > 12:
+            year += month // 12
+            month %= 12
+        self.day = day
+        self.month = month
+        self.year = year
     def setDate(self, day, month, year):
         if day > 31:
             month += day // 31
@@ -36,8 +46,11 @@ class Date:
 # print(date.getBC())
 
 class Address:
-    def __init__(self):
-        pass
+    def __init__(self, house_no, city, distrinct, country):
+        self.house_no = house_no
+        self.city = city
+        self.distrinct = distrinct
+        self.country = country
     def setAddress(self, house_no, city, distrinct, country):
         self.house_no = house_no
         self.city = city
@@ -47,8 +60,10 @@ class Address:
         return "No.{}, {}, {}, {}.".format(self.house_no, self.city, self.distrinct, self.country)
        
 class Department:
-    def __init__(self):
-        pass
+    def __init__(self, description, manager, employlist):
+        self.description = description
+        self.manager = manager
+        self.employlist = employlist
     def setDepartment(self, description, manager, employlist):
         self.description = description
         self.manager = manager
@@ -100,23 +115,23 @@ class PermEmployee(Employee):
     def printInfo(self):
         return super().printInfo() + f"\nSalary: {self.salary}"
     
-name = Name()
+name = Name("Mr.", "John", "Walter")
 name.setName("Mr.", "John", "Walter")
 p1Name = name.getName()
 # print(p1Name)
 
-bdate = Date()
+bdate = Date(1,6,2001)
 bdate.setDate(1,6,2001)
 p1Bd = bdate.getDate() 
 # print(p1Bd)
 
-address = Address()
+address = Address(408, "Latkrabang", "Bangkok", "Thailand")
 address.setAddress(408, "Latkrabang", "Bangkok", "Thailand")
 p1Address = address.getAddress()
 # print(p1Address)
 
 person1 = Person(p1Name, p1Bd, p1Address)
-startDate = Date()
+startDate = Date(1, 2, 2023)
 startDate.setDate(1, 2, 2023)
 day1 = startDate.getDate()
 
