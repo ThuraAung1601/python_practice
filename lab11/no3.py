@@ -74,7 +74,7 @@ class Department:
         if isinstance(manager, PermEmployee):
             self.manager = manager
         else:
-            print(f"{manager} is not in the permanent employee list.")
+            print(f"{manager.name} is not in the permanent employee list.")
     def printInfo(self):
         result = ""
         i = 1
