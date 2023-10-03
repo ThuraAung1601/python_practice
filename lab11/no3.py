@@ -71,7 +71,7 @@ class Department:
     def removeEmployee(self, employee):
         self.employlist.remove(employee)
     def setManager(self, manager):
-        if isinstance(manager, PermEmployee):
+        if isinstance(manager, PermEmployee) and manager in self.employlist:
             self.manager = manager
         else:
             print(f"{manager.name} is not in the permanent employee list.")
