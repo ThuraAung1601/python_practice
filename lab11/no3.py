@@ -60,28 +60,26 @@ class Address:
         return "No.{}, {}, {}, {}.".format(self.house_no, self.city, self.distrinct, self.country)
        
 class Department:
-    def __init__(self, description, manager, employlist):
+    def __init__(self, description, employlist):
         self.description = description
-        self.manager = manager
         self.employlist = employlist
-    def setDepartment(self, description, manager, employlist):
+    def setDepartment(self, description, employlist):
         self.description = description
-        self.manager = manager
         self.employlist = employlist
     def addEmployee(self, employee):
         self.employlist.append[employee]
     def removeEmployee(self, employee):
         self.employlist.remove(employee)
     def setManager(self, manager):
-        if manager in self.employlist:
+        if isinstance(manager, PermEmployee):
             self.manager = manager
         else:
-            print(f"{manager} is not in the employee list.")
+            print(f"{manager} is not in the permanent employee list.")
     def printInfo(self):
-        result = f"Manager: {self.manager}\n"
+        result = ""
         i = 1
         for e in self.employlist:
-            result += f"Employee {i}: {e}\n"
+            result += f"Employee {i}: {e.name}\n"
             i += 1
         return result
 
@@ -115,8 +113,8 @@ class PermEmployee(Employee):
     def printInfo(self):
         return super().printInfo() + f"\nSalary: {self.salary}"
     
-name = Name("Mr.", "John", "Walter")
-name.setName("Mr.", "John", "Walter")
+name = Name("Mr", "John", "Walter")
+name.setName("Mr", "John", "Walter")
 p1Name = name.getName()
 # print(p1Name)
 
@@ -143,3 +141,11 @@ print(employee1.printInfo())
 print()
 employee2 = PermEmployee("Mr. Albert Einstein", "03/12/1995", p1Address, day1, "Software Engineering", 95000)
 print(employee2.printInfo())
+
+employee3 = PermEmployee("Ms. Albert Einstein", "03/12/1995", p1Address, day1, "Software Engineering", 95000)
+print(employee2.printInfo())
+
+department = Department("Software Engr", [employee1, employee2, employee3])
+department.printInfo()
+department.setManager(employee2)
+print(department.printInfo())
