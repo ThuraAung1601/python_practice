@@ -47,22 +47,22 @@ class MedicBot(Robot):
             self.energy -= 20
             r.health += 10
         else:
+            print("Distance out of range")
             pass
         
     def command(self, robotList):
         print("==== Robot ====")
         i = 0
         for robot in robotList:
-            print(i, " : ")
-            robot.displayStatus()
+            print(i, ":", robot.displayStatus())
             i += 1
         print("================")
         command = input("Do you want to move(m) or heal(h) other robot: ")
         if command == 'm':
             super().command(robotList)
         elif command == 'h':
-            print("Select the robot to heal")
-            self.heal(robotList[robot])
+            choice = int(input("Enter ID of robot to heal:"))
+            self.heal(robotList[choice])       
 
 class StrikerBot(Robot):
     def __init__(self, missile=5):
@@ -75,25 +75,25 @@ class StrikerBot(Robot):
             self.missle -= 1
             r.health -= 50
         else:
+            print("Distance out of range")
             pass
         
     def displayStatus(self):
-        return super().displayStatus() + f"missle = {self.missle}"
+        return super().displayStatus() + f" missle = {self.missle}"
     
     def command(self, robotList):
-        print("==== Robot ====")
+        print("==== Robots ====")
         i = 0
         for robot in robotList:
-            print(i, " : ")
-            robot.displayStatus()
+            print(i, ":", robot.displayStatus())
             i += 1
-        print("================")
+        print("=================")
         command = input("Do you want to move(m) or strike(s) other robot: ")
         if command == 'm':
             super().command(robotList)
         elif command == 's':
-            print("Select the robot to heal")
-            self.strike(robotList[robot])        
+            choice = int(input("Enter ID of robot to strike:"))
+            self.strike(robotList[choice])        
 
 def RobotBattle():
     robotList = []
@@ -107,7 +107,7 @@ def RobotBattle():
             print(i, ":", robot.displayStatus())
             i += 1
         print("=================")
-        choice = input("Enter which robot to order, 'c' to create new robot, 'q' to quit: ")
+        choice = input("Enter which robot to order, 'c' to create new robot, 'q' to quit, Robot ID for operation: ")
         if choice == 'q':
             break
         elif choice == "c":
