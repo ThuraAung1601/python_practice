@@ -9,7 +9,3 @@ def power(s):
         return p.union({e.union({x}) for e in p})
 
 print(power(s))
-
-        
-
-    
