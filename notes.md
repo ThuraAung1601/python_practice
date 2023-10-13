@@ -303,8 +303,267 @@ Enter ur age:21
     first, second, third = my_list
     ```
 
-These are some of the most commonly used functions and operations with Python lists. You can use them to manipulate and work with lists in your Python programs.
+### Set
 
+1. **Initialization**: Creating an empty set or initializing a set with values.
 
+   ```python
+   empty_set = set()
+   my_set = {1, 2, 3, 4, 5}
+   ```
 
+2. **Adding Elements**: Adding an element to the set.
 
+   ```python
+   my_set.add(6)
+   ```
+
+3. **Updating with Another Set**: Adding all elements from another set to the current set.
+
+   ```python
+   my_set.update({7, 8, 9})
+   ```
+
+4. **Removing Elements**: Removing an element from the set.
+
+   ```python
+   my_set.remove(3)  # Raises an error if the element doesn't exist
+   my_set.discard(4)  # Removes the element if it exists, does nothing if it doesn't
+   my_set.pop()  # Removes and returns an arbitrary element
+   ```
+
+5. **Clearing**: Removing all elements from the set.
+
+   ```python
+   my_set.clear()
+   ```
+
+6. **Set Operations**: Performing various set operations, such as union, intersection, and difference.
+
+   ```python
+   union_set = set1 | set2  # Union
+   intersection_set = set1 & set2  # Intersection
+   difference_set = set1 - set2  # Difference
+   symmetric_difference_set = set1 ^ set2  # Symmetric Difference
+   ```
+
+7. **Checking Existence**: Checking if an element exists in the set.
+
+   ```python
+   exists = value in my_set
+   ```
+
+8. **Length**: Getting the number of elements in a set.
+
+   ```python
+   length = len(my_set)
+   ```
+
+9. **Copying**: Creating a shallow copy of the set.
+
+   ```python
+   copy_set = my_set.copy()
+   ```
+
+10. **Subset and Superset**: Checking if a set is a subset or superset of another set.
+
+   ```python
+   is_subset = set1.issubset(set2)
+   is_superset = set1.issuperset(set2)
+   ```
+
+11. **Disjoint Sets**: Checking if two sets have no elements in common.
+
+   ```python
+   are_disjoint = set1.isdisjoint(set2)
+   ```
+
+12. **Frozen Sets**: Creating an immutable set (frozen set).
+
+   ```python
+   frozen_set = frozenset(my_set)
+   ```
+
+13. **Set Comprehensions**: Creating a new set by applying an expression to each element of an iterable.
+
+   ```python
+   squares = {x**2 for x in my_set}
+   ```
+
+### Dictionary 
+
+1. **Initialization**: Creating an empty dictionary or initializing a dictionary with key-value pairs.
+
+   ```python
+   empty_dict = {}
+   my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+   ```
+
+2. **Accessing Values**: Accessing values by key.
+
+   ```python
+   name = my_dict["name"]
+   age = my_dict.get("age")  # Using the get method
+   ```
+
+3. **Adding or Updating Key-Value Pairs**: Adding a new key-value pair or updating an existing value.
+
+   ```python
+   my_dict["occupation"] = "Engineer"  # Adding a new key-value pair
+   my_dict["age"] = 31  # Updating an existing value
+   ```
+
+4. **Removing Key-Value Pairs**: Removing a key-value pair by key.
+
+   ```python
+   del my_dict["city"]  # Deleting a specific key-value pair
+   my_dict.pop("age")  # Removing a key-value pair using pop
+   my_dict.clear()  # Removing all key-value pairs, leaving an empty dictionary
+   ```
+
+5. **Getting Keys and Values**: Getting the keys and values of a dictionary.
+
+   ```python
+   keys = my_dict.keys()
+   values = my_dict.values()
+   ```
+
+6. **Iterating Over Keys and Values**: Iterating through the keys or values in a dictionary.
+
+   ```python
+   for key in my_dict:
+       value = my_dict[key]
+   ```
+
+7. **Iterating Over Items**: Iterating through key-value pairs (items) in a dictionary.
+
+   ```python
+   for key, value in my_dict.items():
+       # Do something with key and value
+   ```
+
+8. **Checking Existence**: Checking if a key exists in the dictionary.
+
+   ```python
+   exists = "name" in my_dict
+   ```
+
+9. **Copying**: Creating a shallow copy of the dictionary.
+
+   ```python
+   copy_dict = my_dict.copy()
+   ```
+
+10. **Dictionary Comprehensions**: Creating a new dictionary by applying an expression to each item in an iterable.
+
+    ```python
+    squared_dict = {key: value**2 for key, value in my_dict.items()}
+    ```
+
+11. **Merging Dictionaries**: Merging the contents of two dictionaries.
+
+    ```python
+    dict1 = {"a": 1, "b": 2}
+    dict2 = {"b": 3, "c": 4}
+    merged_dict = {**dict1, **dict2}  # Python 3.5+
+    ```
+
+12. **Default Values**: Getting a value for a key with a default if the key doesn't exist.
+
+    ```python
+    value = my_dict.get("nonexistent_key", "default_value")
+    ```
+
+13. **Sorting**: Sorting the dictionary by keys or values.
+
+    ```python
+    sorted_dict = dict(sorted(my_dict.items()))
+    ```
+
+### Tuples
+
+1. **Initialization**: Creating a tuple or initializing a tuple with values.
+
+   ```python
+   my_tuple = (1, 2, 3, 4, 5)
+   ```
+
+2. **Accessing Elements**: Accessing elements by index.
+
+   ```python
+   element = my_tuple[2]
+   ```
+
+3. **Slicing**: Creating a sub-tuple by specifying a range of indices.
+
+   ```python
+   sub_tuple = my_tuple[1:4]
+   ```
+
+4. **Length**: Getting the number of elements in a tuple.
+
+   ```python
+   length = len(my_tuple)
+   ```
+
+5. **Counting**: Counting the occurrences of a value in a tuple.
+
+   ```python
+   count = my_tuple.count(4)
+   ```
+
+6. **Finding Index**: Finding the index of the first occurrence of a value.
+
+   ```python
+   index = my_tuple.index(3)
+   ```
+
+7. **Concatenation**: Combining two or more tuples.
+
+   ```python
+   combined_tuple = tuple1 + tuple2
+   ```
+
+8. **Repetition**: Creating a new tuple by repeating the elements.
+
+   ```python
+   repeated_tuple = my_tuple * 3
+   ```
+
+9. **Checking Existence**: Checking if an element exists in the tuple.
+
+   ```python
+   exists = value in my_tuple
+   ```
+
+10. **Converting to a List**: Converting a tuple to a list.
+
+    ```python
+    my_list = list(my_tuple)
+    ```
+
+11. **Converting to a Set**: Converting a tuple to a set (removes duplicates).
+
+    ```python
+    my_set = set(my_tuple)
+    ```
+
+12. **Sorting**: Creating a sorted list from a tuple.
+
+    ```python
+    sorted_list = sorted(my_tuple)
+    ```
+
+13. **Unpacking**: Assigning multiple values to multiple variables from a tuple.
+
+    ```python
+    first, second, third = my_tuple
+    ```
+
+14. **Nested Tuples**: Creating tuples within tuples (nested tuples).
+
+    ```python
+    nested_tuple = (1, (2, 3), 4)
+    ```
+
+15. **Immutable**: Remember that tuples are immutable, so you cannot modify their elements after creation. If you need to modify a tuple, you can create a new tuple with the desired changes.
