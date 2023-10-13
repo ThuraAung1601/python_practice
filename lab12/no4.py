@@ -1,3 +1,6 @@
+'''
+Author: Kasitphoom Thowongs https://github.com/Kasitphoom
+'''
 sup = set([1, 2, 3, 4])
 sub1 = set([1, 2])
 sub2 = set([])
