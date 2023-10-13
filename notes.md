@@ -3,6 +3,7 @@
 ## Data types
 - Python has int, float, char, str and bool literal data types.
 - Use type() to check data types.
+
 ```
 python
 >>> type(8.7e-4)
