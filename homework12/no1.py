@@ -46,13 +46,13 @@ abbrev = {
 }
 
 def textese(s):
-    ls = s.split()
-    for i in ls:
-        if i in abbrev:
+    s = s.lower()
+    for i in abbrev:
+        if i in s:
             s = s.replace(i, abbrev[i])
     return s
 
-s1 = "Let me be your friend"
+s1 = "Oh my god Let me be your friend as soon as possible"
 print(textese(s1))
 
 def untextese(s):
@@ -62,11 +62,12 @@ def untextese(s):
             unabbrev[value] = key
         else:
             pass
+    s = s.lower()
     ls = s.split()
     for i in ls:
         if i in unabbrev:
             s = s.replace(i, unabbrev[i])
     return s
 
-s2 = "ur father ask me to cu m8"
+s2 = "ur father ask me to cu ASAP m8"
 print(untextese(s2))
