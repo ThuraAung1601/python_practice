@@ -3,6 +3,7 @@ No.4
 Write a recursive program to solve the tower of Hanoi and
 draw an animation of it.
 '''
+
 import turtle
 import time
 
@@ -84,11 +85,11 @@ pins = {
 disc1 = create_disc(-200, -180, 10, 'orange')
 disc2 = create_disc(-200, -160, 8, 'blue')
 disc3 = create_disc(-200, -140, 6, 'red')
-# disc4 = create_disc(-200, -120, 4, 'yellow')
-# disc5 = create_disc(-200, -100, 2, 'green')
+disc4 = create_disc(-200, -120, 4, 'yellow')
+disc5 = create_disc(-200, -100, 2, 'green')
 
-pins['A'].discs = [disc1, disc2, disc3]
+pins['A'].discs = [disc1, disc2, disc3, disc4, disc5]
 
-hanoi(3, 'A', 'B', 'C', pins)
+hanoi(5, 'A', 'B', 'C', pins)
 
 turtle.done()
