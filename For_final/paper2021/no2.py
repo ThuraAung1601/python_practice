@@ -40,4 +40,6 @@ def ranking(popularity_scores):
     return ranked
 
 print(ranking(popularity_scores))
-# {1: 'Python', 2: 'C++', 3: 'Java', 4: 'C', 5: 'C#'}
+
+# [['Python', 100], ['C++', 99.7], ['Java, Rust', 97.5], ['C', 96.7], ['C#', 86.1]]
+# {1: 'Python', 2: 'C++', 3: 'Java, Rust', 4: 'C', 5: 'C#'}
