@@ -27,7 +27,7 @@ class Sale_item(ABC):
     def calculate_cost(self):
         pass
 
-class Food(Sale_item):
+class Food(Sale_item, ABC):
     def __init__(self, name, price):
         super().__init__(name, price)
     @abstractmethod
